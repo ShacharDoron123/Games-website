@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title></title>
-    </head>
-    <body>
-        <div id="display">
-            <h2 id="numDisplay"></h2>
-            <h2 id="valDisplay"></h2>
-            <h2 id="priceDisplay"></h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clicker Game</title>
+</head>
+<body>
+    <div class="clicker-game">
+        <h1>Clicker Game</h1>
+        <div class="display">
+            <h2 id="numDisplay">0</h2>
+            <h2 id="valDisplay">Value: 1</h2>
+            <h2 id="priceDisplay">Upgrade Cost: 10</h2>
         </div>
-        <div id="buttons">
-            <button id="click"></button>
-            <button id="upgrade"></button>
+        <div class="buttons">
+            <button id="click">Click Me!</button>
+            <button id="upgrade">Upgrade</button>
         </div>
-        <script src="Clicker.js"></script>
-    </body>
+    </div>
+    <script src="Clicker.js"></script>
+</body>
 </html>
