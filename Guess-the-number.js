@@ -1,5 +1,6 @@
 let random;
 let attempts;
+let history = [];
 
 //get the values to the range
 document.getElementById("startBtn").onclick = function () {
@@ -21,7 +22,7 @@ document.getElementById("guessBtn").onclick = function () {
         return;
     }
 
-    if (attempts === 0) {
+    if (attempts <= 0) {
         document.getElementById("output").textContent =
             "הפסדת! המספר היה " + random;
         return;
@@ -34,4 +35,10 @@ document.getElementById("guessBtn").onclick = function () {
         document.getElementById("output").textContent =
             "נמוך מדי! נשארו " + attempts + " ניסיונות";
     }
+    handleHistory(guess);
 };
+
+function handleHistory(guess){
+    history.push(guess);
+    document.getElementById("history").innerHTML = history.join("<br>");
+}
