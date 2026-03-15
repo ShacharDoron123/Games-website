@@ -31,14 +31,19 @@ document.getElementById("guessBtn").onclick = function () {
     if (guess > random)  {
         document.getElementById("output").textContent =
             "גבוה מדי! נשארו " + attempts + " ניסיונות";
+            handleHistory(guess,"+");
     } else {
         document.getElementById("output").textContent =
             "נמוך מדי! נשארו " + attempts + " ניסיונות";
+            handleHistory(guess, "-");
     }
-    handleHistory(guess);
 };
 
-function handleHistory(guess){
-    history.push(guess);
+function handleHistory(guess, operator){
+    if(operator === "+")
+        history.push('<div style="color:blue;">' + guess + '</div>');
+    else{
+        history.push('<div style="color:red;">' + guess + '</div>');
+    }
     document.getElementById("history").innerHTML = history.join("<br>");
 }
