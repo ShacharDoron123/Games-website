@@ -18,8 +18,11 @@ document.getElementById("reset").onclick = function () {
     
     random = Math.floor(Math.random() * (max - min + 1)) + min;
     attempts = max-min; 
+     history = [];
+     
+    document.getElementById("guess").value = "";
     document.getElementById("output").textContent = "המשחק התחיל! תתחיל לנחש...";
-        document.getElementById("history").innerHTML = "";
+    document.getElementById("history").innerHTML = "";
 
 };
 
