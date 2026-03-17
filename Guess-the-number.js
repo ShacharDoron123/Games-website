@@ -12,6 +12,20 @@ document.getElementById("startBtn").onclick = function () {
     document.getElementById("output").textContent = "המשחק התחיל! תתחיל לנחש...";
 };
 
+document.getElementById("restartBtn").onclick = function () {
+    let min = Number(document.getElementById("min").value);
+    let max = Number(document.getElementById("max").value);
+    
+    random = Math.floor(Math.random() * (max - min + 1)) + min;
+    attempts = max-min; 
+     history = [];
+
+    document.getElementById("guess").value = "";
+    document.getElementById("output").textContent = "המשחק התחיל! תתחיל לנחש...";
+    document.getElementById("history").innerHTML = "";
+
+};
+
 document.getElementById("guessBtn").onclick = function () {
     let guess = Number(document.getElementById("guess").value);
     attempts--;
