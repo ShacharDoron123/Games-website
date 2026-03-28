@@ -1,30 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>איקס עיגול</title>
-    </head>
-    <body>
-        <h1>איקס עיגול</h1>
-        <div id="control">
-            <button>start</button>
-            <button>reset</button>
-        </div>
-        <div id="game-board">
-            <button value="0-0"></button>
-            <button value="0-1"></button>
-            <button value="0-2"></button>
-            <br>
-            <button value="1-0"></button>
-            <button value="1-1"></button>
-            <button value="1-2"></button>
-            <br>
-            <button value="2-0"></button>
-            <button value="2-1"></button>
-            <button value="2-2"></button>
-        </div>
-     </body>
-     <script src="tic-tac-toe.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>איקס עיגול</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        color: #333;
+        margin-top: 50px;
+      }
+      #control button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+
+      #game-board {
+        margin-top: 20px;
+      }
+
+      #game-board button {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        margin: 2px;
+        background-color: #fff;
+        border: 2px solid #333;
+        border-radius: 8px;
+        cursor: pointer;
+        vertical-align: top; 
+      }
+      button:hover {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>איקס עיגול</h1>
+    <div id="control">
+      <button>start</button>
+      <button>reset</button>
+    </div>
+    <div id="game-board">
+      <button id="0-0" onclick="handleClick('0-0')"></button>
+      <button id="0-1" onclick="handleClick('0-1')"></button>
+      <button id="0-2" onclick="handleClick('0-2')"></button>
+      <br />
+      <button id="1-0" onclick="handleClick('1-0')"></button>
+      <button id="1-1" onclick="handleClick('1-1')"></button>
+      <button id="1-2" onclick="handleClick('1-2')"></button>
+      <br />
+      <button id="2-0" onclick="handleClick('2-0')"></button>
+      <button id="2-1" onclick="handleClick('2-1')"></button>
+      <button id="2-2" onclick="handleClick('2-2')"></button>
+    </div>
+  </body>
+  <script src="tic-tac-toe.js"></script>
 </html>
