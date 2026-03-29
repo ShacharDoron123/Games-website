@@ -1,24 +1,34 @@
 let player = "x";
-const board = [
+let board = [
   [null, null, null],
   [null, null, null],
   [null, null, null]
 ];
-let game = true;
-
+let game = false;
+let scoreX = 0;
+let scoreO = 0;
 
 function handleClick(select){
   if(game){
     if (isAvailable(select)) {
-    move(select);
-    if(isWin(player))
-      game = false;
-    if(player == 'x')
-      player = 'o';
-    else
-      player = 'x';
+      move(select);
+      if(isWin(player)){
+        game = false;
+        if(player == 'x') {
+          scoreX++;
+        } else {
+          scoreO++;
+        }
+        document.getElementById("scoreO").textContent = "Score O: " + scoreO;
+        document.getElementById("scoreX").textContent = "Score X: " + scoreX;
+      } else {
+        if(player == 'x')
+          player = 'o';
+        else
+          player = 'x';
+      }
     }
-  printBoard();
+    printBoard();
   }
 }
 
@@ -74,10 +84,31 @@ function printBoard(){
      document.getElementById(id).textContent = board[i][j];
     }
   }
+  document.getElementById("scoreO").textContent = "Score O: " + scoreO;
+  document.getElementById("scoreX").textContent = "Score X: " + scoreX;
 }
 
+document.getElementById("Again").onclick = function(){
+  game = true;
+  player = "x";
+  board = [
+  [null, null, null],
+  [null, null, null],
+  [null, null, null]
+];
+printBoard();
+}
 
+document.getElementById("Restart").onclick = function(){
+  game = true;
+  player = "x";
+  scoreX = 0;
+  scoreO = 0;
 
-
-
-
+  board = [
+  [null, null, null],
+  [null, null, null],
+  [null, null, null]
+];
+printBoard();
+}
