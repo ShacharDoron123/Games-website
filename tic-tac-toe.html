@@ -40,13 +40,18 @@
       button:hover {
         background-color: #eee;
       }
+      h2{
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <h1>איקס עיגול</h1>
     <div id="control">
-      <button>start</button>
-      <button>reset</button>
+      <button id="Again">Play Again</button>
+      <button id="Restart">Restart Match</button>
+      <h2 id="scoreX"></h2>
+      <h2 id="scoreO"></h2>
     </div>
     <div id="game-board">
       <button id="0-0" onclick="handleClick('0-0')"></button>
@@ -61,6 +66,10 @@
       <button id="2-1" onclick="handleClick('2-1')"></button>
       <button id="2-2" onclick="handleClick('2-2')"></button>
     </div>
+    <footer>
+            <hr>
+            <p>&copy; כל הזכויות שמורות 2026</p>
+        </footer>
   </body>
   <script src="tic-tac-toe.js"></script>
 </html>
