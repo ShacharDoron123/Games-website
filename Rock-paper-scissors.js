@@ -16,7 +16,7 @@ document.getElementById("rock").onclick = function(){
         //win for the pc
         score--;
         document.getElementById("output").textContent = "ניצחתי!!! בחרתי נייר, ונייר מנצח אבן";
-        document.getElementById("score").textContent = score;
+        document.getElementById("score").textContent =score;
         return;
     } else if(choice === "rock"){
         //same
