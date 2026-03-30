@@ -1,6 +1,9 @@
 let options = ["rock", "paper", "scissors"];
 let score = 0;
 
+document.getElementById("output").textContent = "מחכה שתבחרר";
+document.getElementById("score").textContent = "ניקוד: "+score;
+
 //rock
 document.getElementById("rock").onclick = function(){
     let user = "rock"
@@ -10,13 +13,13 @@ document.getElementById("rock").onclick = function(){
         //win for the user
         score++;
         document.getElementById("output").textContent = "ניצחת!!! בחרתי מספריים, ואבן מנצחת מספריים";
-        document.getElementById("score").textContent = score;
+        document.getElementById("score").textContent = "ניקוד: "+score;
         return;
     } else if(choice === "paper"){
         //win for the pc
         score--;
         document.getElementById("output").textContent = "ניצחתי!!! בחרתי נייר, ונייר מנצח אבן";
-        document.getElementById("score").textContent = score;
+        document.getElementById("score").textContent = "ניקוד: "+score;
         return;
     } else if(choice === "rock"){
         //same
@@ -34,7 +37,7 @@ document.getElementById("paper").onclick = function(){
         //win for the pc
         score--;
         document.getElementById("output").textContent = "ניצחתי!!! בחרתי מספריים, ומספריים מנצחות נייר";
-        document.getElementById("score").textContent = score;
+        document.getElementById("score").textContent = "ניקוד: "+score;
         return;
     } else if(choice === "paper"){
         //same
@@ -44,7 +47,7 @@ document.getElementById("paper").onclick = function(){
         //win for the user 
         score++;
         document.getElementById("output").textContent = "ניצחת!!! בחרתי אבן, ונייר מנצח אבן";
-        document.getElementById("score").textContent = score;
+        document.getElementById("score").textContent = "ניקוד: "+score;
         return;
     }
 }
@@ -62,13 +65,21 @@ document.getElementById("scissors").onclick = function(){
         //win for the user
         score++;
         document.getElementById("output").textContent = "ניצחת!!! בחרתי נייר ומספריים מנצחות נייר";
-        document.getElementById("score").textContent = score;
+        document.getElementById("score").textContent = "ניקוד: "+score;
         return;
     } else if(choice === "rock"){
         //win for the pc
         score--;
         document.getElementById("output").textContent = "ניצחתי!!! בחרתי אבן, אבן מנצחת מספריים";
-        document.getElementById("score").textContent = score;
+        document.getElementById("score").textContent = "ניקוד: "+score;
         return;
     }
+}
+
+//Restart btn
+
+document.getElementById("Restart").onclick = function(){
+    score = 0;
+    document.getElementById("output").textContent = "מחכה שתבחרר";
+    document.getElementById("score").textContent = "ניקוד: "+score;
 }

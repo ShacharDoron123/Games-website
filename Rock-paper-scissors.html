@@ -4,21 +4,46 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <title></title>
+        <title>Rock paper scissors</title>
+        <style>
+            .divBtn{
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                gap: 10px;
+                width: 100%;
+            }
+            .h2-div{
+                text-align: center;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                
+            }
+        </style>
     </head>
     <body>
+       <div>
+      <h1>אתר המשחקים שלי</h1>
+    <a href="/index.html"><button>חזרה</button></a>
+    <hr>
+    </div>
         <h1>משחק אבן נייר ומספריים</h1>
-        <div class="div">
+        <div class="divBtn">
             <button id="paper">נייר</button>
             <button id="rock">אבן</button>
             <button id="scissors">מספריים</button>
         </div>
-        <p id="output"></p>
-        <p id="score"></p>
-        <script src="Rock-paper-scissors.js"></script>
+        <div class="h2-div">
+            <h2 id="output"></h2>
+            <h2 id="score"></h2>
+            <button id="Restart">Restart</button>
+        </div>
         <footer>
             <hr>
             <p>&copy; כל הזכויות שמורות 2026</p>
         </footer>
     </body>
+    <script src="Rock-paper-scissors.js"></script>
 </html>
