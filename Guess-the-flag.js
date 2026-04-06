@@ -11,9 +11,11 @@ const flags = [
   "Brazil",
   "Italy",
 ];
-
+let score = 0;
+let selectedFlags = [];
+let correctFlag = "";
 function game() {
-  let selectedFlags = choise4flages();
+  selectedFlags = choise4flages();
 
   document.getElementById("flag1").src = `./img/${selectedFlags[0]}.png`;
   document.getElementById("flag2").src = `./img/${selectedFlags[1]}.png`;
@@ -21,33 +23,72 @@ function game() {
   document.getElementById("flag4").src = `./img/${selectedFlags[3]}.png`;
 
   const correctIndex = Math.floor(Math.random() * 4);
-  const correctFlag = selectedFlags[correctIndex];
+  correctFlag = selectedFlags[correctIndex];
 
   document.getElementById("q").innerText =
     `Where is the flag of ${correctFlag.replace("_", " ")}?`;
 
-
-  document.getElementById("flag1Btn").onclick = function () {
-    if (selectedFlags[0] === correctFlag) game();
-  };
-
-  document.getElementById("flag2Btn").onclick = function () {
-    if (selectedFlags[1] === correctFlag) game();
-  };
-
-  document.getElementById("flag3Btn").onclick = function () {
-    if (selectedFlags[2] === correctFlag) game();
-  };
-
-  document.getElementById("flag4Btn").onclick = function () {
-    if (selectedFlags[3] === correctFlag) game();
-  };
+  document.getElementById("score").innerText = "score: " + score;
 }
+
+
+document.getElementById("flag1Btn").onclick = function () {
+  if(isGame){
+    if (selectedFlags[0] === correctFlag) {
+    score++;
+    document.getElementById("score").innerText = "score: " + score;
+    game();
+  } else {
+    score--;
+    document.getElementById("score").innerText = "score: " + score;
+  }
+  }
+};
+
+document.getElementById("flag2Btn").onclick = function () {
+  if(isGame){
+    if (selectedFlags[1] === correctFlag) {
+    score++;
+    document.getElementById("score").innerText = "score: " + score;
+    game();
+  } else {
+    score--;
+    document.getElementById("score").innerText = "score: " + score;
+  }
+  }
+};
+
+document.getElementById("flag3Btn").onclick = function () {
+  if(isGame){
+    if (selectedFlags[2] === correctFlag) {
+    score++;
+    document.getElementById("score").innerText = "score: " + score;
+    game();
+  } else {
+    score--;
+    document.getElementById("score").innerText = "score: " + score;
+  }
+  }
+};
+
+document.getElementById("flag4Btn").onclick = function () {
+  if(isGame){
+    if (selectedFlags[3] === correctFlag) {
+    score++;
+    document.getElementById("score").innerText = "score: " + score;
+    game();
+  } else {
+    score--;
+    document.getElementById("score").innerText = "score: " + score;
+  }
+  }
+};
 
 document.getElementById("startBtn").onclick = function () {
   if (!isGame) {
     isGame = true;
     game();
+    document.getElementById("score").innerText = "score: " + score;
   }
 };
 
