@@ -4,6 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      button {
+  width: 150px;
+  height: 100px;
+  padding: 0;
+  margin: 10px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden; /* חשוב! חותך תמונות שיוצאות */
+  cursor: pointer;
+  background: none;
+}
+
+button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ממלא את כל הכפתור יפה */
+}
+    </style>
     <title>Guess the flag</title>
   </head>
   <body>
@@ -12,10 +31,20 @@
       <a href="/index.html"><button>חזרה</button></a>
       <hr />
     </header>
+    <h1>guess the flag</h1>
+    <div>
+      <h2 id="q"></h2>
+      <button id="flag1Btn"><img id="flag1" src="" alt="Flag 1"></button>
+       <button id="flag2Btn"><img id="flag2" src="" alt="Flag 2"></button>
+       <button id="flag3Btn"><img id="flag3" src="" alt="Flag 3"></button>
+       <button id="flag4Btn"><img id="flag4" src="" alt="Flag 4"></button>
+       <br>
+      <button id="startBtn">Start</button>
+    </div>
     <footer>
       <hr />
       <p>&copy; כל הזכויות שמורות 2026</p>
     </footer>
-    <script src="Clicker.js"></script>
+    <script src="Guess-the-flag.js"></script>
   </body>
 </html>
