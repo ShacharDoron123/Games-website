@@ -14,6 +14,7 @@ const flags = [
 let score = 0;
 let selectedFlags = [];
 let correctFlag = "";
+let timer;
 function game() {
   selectedFlags = choise4flages();
 
@@ -90,9 +91,17 @@ document.getElementById("startBtn").onclick = function () {
     game();
     document.getElementById("score").innerText = "score: " + score;
   }
-};
+   timer = setTimeout(() => {
+      isGame = false;
+      document.getElementById("flag1").src = "./img/placeholder.png";
+      document.getElementById("flag2").src = "./img/placeholder.png";
+      document.getElementById("flag3").src = "./img/placeholder.png";
+      document.getElementById("flag4").src = "./img/placeholder.png";
+       alert("Time's up! Your score is: " + score);
+    }, 60000);
+  };
 
 function choise4flages() {
   let shuffled = [...flags].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, 4);
-}
+};
