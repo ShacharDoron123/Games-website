@@ -18,7 +18,7 @@ document.getElementById("restartBtn").onclick = function () {
     
     random = Math.floor(Math.random() * (max - min + 1)) + min;
     attempts = max-min; 
-     history = [];
+    history = [];
 
     document.getElementById("guess").value = "";
     document.getElementById("output").textContent = "המשחק התחיל! תתחיל לנחש...";
