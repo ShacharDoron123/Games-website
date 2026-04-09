@@ -19,6 +19,15 @@ It was built as a learning project to practice:
 * UI design
 * Web development
 
+## 🕹️ List of Games
+
+- 🔢 **Guess the Number** – Try to guess the correct number  
+- ✊✋✌️ **Clicker Game** – Click and unlock upgrades  
+- 🧠 **Rock Paper Scissors** – Play against the computer  
+- 🎡 **Tic Tac Toe** – Classic 2-player game  
+- 🎯 **Guess the Flag** – Identify the country by its flag  
+- 🚀 **more are Coming Soon...**
+
 ---
 
 ## 🎯 Features
@@ -40,8 +49,11 @@ It was built as a learning project to practice:
 
 
 ## 📸 Screenshots
-
-(Add screenshots of your games here)
+<img src="img/index.png" width="600">
+<img src="img/gtf.png" width="600">
+<img src="img/rps.png" width="600">
+<img src="img/xo.png" width="600">
+<img src="img/clicker.png" width="600">
 
 ---
 
