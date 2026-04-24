@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        direction: ltr;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+      main div {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    </style>
     <title>Wordle</title>
   </head>
   <body>
@@ -12,8 +28,10 @@
       <a href="./index.html"><button>חזרה</button></a>
       <hr />
     </header>
+    
     <main>
-      <button id="start">start</button>
+      <button id="start" style="margin-bottom: 15px;">start</button>
+      
       <div>
         <button id="1.1"></button>
         <button id="2.1"></button>
@@ -52,11 +70,12 @@
         <button id="5.6"></button>
         <br />
       </div>
-      <br/>
-      <input id="word" type="string">
+      
+      <input id="word" type="text" style="margin-bottom: 10px;">
       <button id="send">send</button>
       <p id="display-win"></p>
     </main>
+
     <footer>
       <hr />
       <p>&copy; כל הזכויות שמורות 2026</p>
