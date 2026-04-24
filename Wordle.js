@@ -27,9 +27,9 @@ function choice() {
 }
 
 document.getElementById("send").onclick = function () {
-  if (isPlay) {
+  if (isPlay && index < 7) {
     let word = document.getElementById("word").value;
-    
+
     if (word == null) return;
     if (!words.includes(word)) return;
 
@@ -53,7 +53,7 @@ document.getElementById("send").onclick = function () {
       char4 == letters[3] &&
       char5 == letters[4]
     ) {
-      document.getElementById("disply-win").textContent =
+      document.getElementById("display-win").textContent =
         "you win after " + index + " guess";
     }
 
@@ -87,5 +87,10 @@ document.getElementById("send").onclick = function () {
       document.getElementById("5." + index).style.backgroundColor = "yellow";
     else document.getElementById("5." + index).style.backgroundColor = "green";
     index++;
+  }
+  if (index == 7 && isPlay) {
+    document.getElementById("display-win").textContent =
+      "Game Over! The word was: " + current;
+    isPlay = false;
   }
 };
