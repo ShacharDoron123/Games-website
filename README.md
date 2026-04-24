@@ -25,7 +25,8 @@ It was built as a learning project to practice:
 - ✊✋✌️ **Clicker Game** – Click and unlock upgrades  
 - 🧠 **Rock Paper Scissors** – Play against the computer  
 - 🎡 **Tic Tac Toe** – Classic 2-player game  
-- 🎯 **Guess the Flag** – Identify the country by its flag  
+- 🎯 **Guess the Flag** – Identify the country by its flag
+- 🟩 **Wordle** – Guess the hidden 5-letter word
 - 🚀 **more are Coming Soon...**
 
 ---
