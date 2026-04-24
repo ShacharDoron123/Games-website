@@ -29,6 +29,10 @@ function choice() {
 document.getElementById("send").onclick = function () {
   if (isPlay) {
     let word = document.getElementById("word").value;
+    
+    if (word == null) return;
+    if (!words.includes(word)) return;
+
     word = word.split("");
     let char1 = word[0];
     let char2 = word[1];
