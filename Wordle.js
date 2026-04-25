@@ -24,15 +24,18 @@ function choice() {
   chr3 = letters[2];
   chr4 = letters[3];
   chr5 = letters[4];
-}
+};
 
 document.getElementById("send").onclick = function () {
-  if (isPlay && index < 7) {
+     if (isPlay && index < 7) {
     let word = document.getElementById("word").value;
 
-    if (word == null) return;
-    if (!words.includes(word)) return;
-
+    if (word == null || word.length>5){
+     window.alert("the word must be 5 letters long");
+    } 
+    if (!words.includes(word)){
+     window.alert("this word isnt in the list of the words.")
+    }
     word = word.split("");
     let char1 = word[0];
     let char2 = word[1];
