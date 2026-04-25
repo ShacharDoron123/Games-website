@@ -32,9 +32,11 @@ document.getElementById("send").onclick = function () {
 
     if (word == null || word.length>5){
      window.alert("the word must be 5 letters long");
+     return;
     } 
     if (!words.includes(word)){
      window.alert("this word isnt in the list of the words.")
+     return;
     }
     word = word.split("");
     let char1 = word[0];
