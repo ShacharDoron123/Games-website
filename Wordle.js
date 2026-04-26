@@ -56,7 +56,11 @@ document.getElementById("send").onclick = function () {
     ) {
       document.getElementById("display-win").textContent =
         "you win after " + index + " guess";
-
+      document.getElementById("1." + index).style.backgroundColor = "green";
+      document.getElementById("2." + index).style.backgroundColor = "green";
+      document.getElementById("3." + index).style.backgroundColor = "green";
+      document.getElementById("4." + index).style.backgroundColor = "green";
+      document.getElementById("5." + index).style.backgroundColor = "green";
       isPlay = false;
       return;
     }
