@@ -15,12 +15,12 @@ document.getElementById("start").onclick = function () {
 function choice() {
   current = words[Math.floor(Math.random() * words.length)];
   letters = current.split("");
-};
+}
 
 document.getElementById("send").onclick = function () {
   if (isPlay && index < 7) {
-
     let word = document.getElementById("word").value;
+    word = word.toLowerCase();
 
     if (!word || word.length != 5) {
       window.alert("the word must be 5 letters long");
@@ -65,36 +65,31 @@ document.getElementById("send").onclick = function () {
       document.getElementById("1." + index).style.backgroundColor = "gray";
     else if (char1 != letters[0])
       document.getElementById("1." + index).style.backgroundColor = "yellow";
-    else
-      document.getElementById("1." + index).style.backgroundColor = "green";
+    else document.getElementById("1." + index).style.backgroundColor = "green";
 
     if (!letters.includes(char2))
       document.getElementById("2." + index).style.backgroundColor = "gray";
     else if (char2 != letters[1])
       document.getElementById("2." + index).style.backgroundColor = "yellow";
-    else
-      document.getElementById("2." + index).style.backgroundColor = "green";
+    else document.getElementById("2." + index).style.backgroundColor = "green";
 
     if (!letters.includes(char3))
       document.getElementById("3." + index).style.backgroundColor = "gray";
     else if (char3 != letters[2])
       document.getElementById("3." + index).style.backgroundColor = "yellow";
-    else
-      document.getElementById("3." + index).style.backgroundColor = "green";
+    else document.getElementById("3." + index).style.backgroundColor = "green";
 
     if (!letters.includes(char4))
       document.getElementById("4." + index).style.backgroundColor = "gray";
     else if (char4 != letters[3])
       document.getElementById("4." + index).style.backgroundColor = "yellow";
-    else
-      document.getElementById("4." + index).style.backgroundColor = "green";
+    else document.getElementById("4." + index).style.backgroundColor = "green";
 
     if (!letters.includes(char5))
       document.getElementById("5." + index).style.backgroundColor = "gray";
     else if (char5 != letters[4])
       document.getElementById("5." + index).style.backgroundColor = "yellow";
-    else
-      document.getElementById("5." + index).style.backgroundColor = "green";
+    else document.getElementById("5." + index).style.backgroundColor = "green";
 
     index++;
   }
