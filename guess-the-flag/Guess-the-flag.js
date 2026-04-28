@@ -39,10 +39,10 @@ let timeLeft = 60;
 function game() {
   selectedFlags = choise4flages();
 
-  document.getElementById("flag1").src = `./img/${selectedFlags[0]}.png`;
-  document.getElementById("flag2").src = `./img/${selectedFlags[1]}.png`;
-  document.getElementById("flag3").src = `./img/${selectedFlags[2]}.png`;
-  document.getElementById("flag4").src = `./img/${selectedFlags[3]}.png`;
+  document.getElementById("flag1").src = `../img/${selectedFlags[0]}.png`;
+  document.getElementById("flag2").src = `../img/${selectedFlags[1]}.png`;
+  document.getElementById("flag3").src = `../img/${selectedFlags[2]}.png`;
+  document.getElementById("flag4").src = `../img/${selectedFlags[3]}.png`;
 
   const correctIndex = Math.floor(Math.random() * 4);
   correctFlag = selectedFlags[correctIndex];
@@ -120,10 +120,10 @@ document.getElementById("startBtn").onclick = function () {
 
       if (timeLeft <= 0) {
         clearInterval(timer);
-        document.getElementById("flag1").src = "./img/placeholder.png";
-        document.getElementById("flag2").src = "./img/placeholder.png";
-        document.getElementById("flag3").src = "./img/placeholder.png";
-        document.getElementById("flag4").src = "./img/placeholder.png";
+        document.getElementById("flag1").src = "../img/placeholder.png";
+        document.getElementById("flag2").src = "../img/placeholder.png";
+        document.getElementById("flag3").src = "../img/placeholder.png";
+        document.getElementById("flag4").src = "../img/placeholder.png";
         isGame = false;
         alert("Time's up! Score: " + score);
       }

@@ -1,0 +1,2 @@
+const imgs = []
+let word;
