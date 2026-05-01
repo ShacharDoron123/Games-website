@@ -1,4 +1,3 @@
-const img = [];
 let result = [];
 let numOfDice;
 
