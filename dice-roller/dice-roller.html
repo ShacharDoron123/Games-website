@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>dice roller</title>
+  </head>
+  <body>
+    <header>
+      <h1>אתר המשחקים שלי</h1>
+      <a href="../index.html"><button>חזרה</button></a>
+      <hr />
+    </header>
+    <main>
+      <div id="con">
+        <h1>dice roller</h1>
+        <label for="num">enter number of dices:</label>
+        <input type="number" value="1" min="1" id="num">
+        <button onclick="rollDice()">Roll Dice</button>
+      </div>
+      <div id="diceImages"></div>
+    </main>
+    <footer>
+      <hr />
+      <p>&copy; כל הזכויות שמורות 2026</p>
+    </footer>
+  </body>
+  <script src="dice-roller.js"></script>
+</html>
