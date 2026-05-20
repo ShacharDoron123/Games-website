@@ -4,6 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 25px;
+      }
+
+      h1 {
+        margin: 10px 0;
+      }
+
+      select,
+      input {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 8px 14px;
+        cursor: pointer;
+      }
+
+      #word {
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin-top: 15px;
+      }
+
+      #level-img {
+        margin-top: 10px;
+      }
+    </style>
     <title>hangman</title>
   </head>
   <body>
@@ -13,14 +53,28 @@
       <hr />
     </header>
     <main>
-        <h1>hangman</h1>
-        <div id="word"></div>
-        <div id="level-img"></div>
+      <h1>hangman</h1>
+      <label for="selectedCategory">Select a category</label>
+      <select id="selectedCategory">
+        <option value="countries">Countries (מדינות)</option>
+        <option value="vegetablesAndFruits">
+          Vegetables and Fruits (פירות וירקות)
+        </option>
+      </select>
+      <br /><br />
+      <button onclick="Game()">start</button>
+      <div id="word"></div>
+      <div id="level-img"></div>
+
+      <br />
+      <label for="input">enter you guess:</label>
+      <input id="input" type="text" placeholder="enter word or letter" />
+      <button id="send" onclick="check()">send</button>
     </main>
     <footer>
       <hr />
       <p>&copy; כל הזכויות שמורות 2026</p>
     </footer>
-    <script src="hangman.js"></script>
+    <script type="module" src="./hangman.js"></script>
   </body>
 </html>

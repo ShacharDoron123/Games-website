@@ -1,2 +1,45 @@
-export const countries = []
-export const vegetablesAndFruits = []
+export const countries = [
+  "israel",
+  "france",
+  "spain",
+  "italy",
+  "germany",
+  "brazil",
+  "japan",
+  "china",
+  "greece",
+  "india",
+  "mexico",
+  "canada",
+  "england",
+  "australia",
+  "holland",
+  "sweden",
+  "thailand",
+  "portugal",
+  "turkey",
+  "belgium"
+];
+
+export const vegetablesAndFruits = [
+  "apple",
+  "banana",
+  "tomato",
+  "cucumber",
+  "orange",
+  "watermelon",
+  "lemon",
+  "carrot",
+  "onion",
+  "garlic",
+  "peach",
+  "grapes",
+  "strawberry",
+  "lettuce",
+  "pepper",
+  "avocado",
+  "mango",
+  "plum",
+  "pineapple",
+  "eggplant"
+];

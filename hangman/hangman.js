@@ -31,10 +31,16 @@ function selecteWord(category) {
 function check() {
   if (isGame) {
     let input = document.getElementById("input").value;
+    let found = false;
     if (input.length == 1) {
       for (let i = 0; i < word.length; i++) {
-        if (word[i] == input) guessedLetters[i] = true;
+        if (word[i] == input){
+            guessedLetters[i] = true;
+            found = true;
+        }
       }
+      if(!found)
+        index++;
       display();
     } else if (input.length == word.length) {
       for (let i = 0; i < word.length; i++) {
@@ -45,6 +51,11 @@ function check() {
         "you won, the word was " + word;
     }
   }
+  if (index >= 7) {
+    isGame = false;
+    document.getElementById("word").textContent =
+      "you lost! the word was " + word;
+  }
   document.getElementById("input").value = "";
   return;
 }
@@ -53,13 +64,13 @@ function display() {
   let temp = "";
 
   for (let i = 0; i < word.length; i++) {
-    if (guessedLetters[i] == true) 
-        temp += " "+word[i];
-    else if (word[i] === " ")
-         temp += "  ";
-    else 
-        temp += "_ ";
+    if (guessedLetters[i] == true) temp += " " + word[i];
+    else if (word[i] === " ") temp += "  ";
+    else temp += "_ ";
   }
 
   document.getElementById("word").textContent = temp;
 }
+
+window.Game = Game;
+window.check = check;
